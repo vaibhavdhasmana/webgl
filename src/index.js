@@ -5,13 +5,13 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-const rootElement = document.getElementById("wrong-id");
-const root = createRoot(rootElement);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// const rootElement = document.getElementById("wrong-id");
+// const root = createRoot(rootElement);
 root.render(
-  // <React.StrictMode>
-  <App />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

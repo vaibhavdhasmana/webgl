@@ -19,16 +19,16 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 // app.use(cookieParser());
 // app.use("/", indexRouter);
 // app.use(express.static("public/build"));
-app.use(express.static(path.join(__dirname, "unityBuild")));
+// app.use("b2", express.static(path.join(__dirname, "unityBuild")));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/play", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.join(__dirname, "unityBuild", "index.html"));
 });
 app.use("/", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.use(express.static("build"));
-
+// app.use(express.static("build"));
 // app.use("/", (req, res) => {
 //   res.sendFile(path.join(__dirname, "", "index.html"));
 // });
